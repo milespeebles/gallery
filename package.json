@@ -26,9 +26,9 @@
     "rxjs-hooks": "0.5.2",
     "sanitize.css": "11.0.0",
     "unfetch": "4.1.0",
-    "service": "file:../service",
-    "toolbelt": "file:../toolbelt",
-    "tags": "file:../tags"
+    "service": "git://github.com/milespeebles/service.git",
+    "toolbelt": "git://github.com/milespeebles/toolbelt.git",
+    "tags": "git://github.com/milespeebles/tags.git"
   },
   "devDependencies": {
     "@babel/cli": "7.7.4",
