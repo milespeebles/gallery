@@ -1,0 +1,51 @@
+{
+  "name": "gallery",
+  "version": "0.1.0",
+  "license": "MIT",
+  "dependencies": {
+    "@emotion/core": "10.0.22",
+    "@rebass/forms": "4.0.6",
+    "@reduxjs/toolkit": "1.0.4",
+    "@zeit/next-css": "1.0.1",
+    "crocks": "0.12.4",
+    "emotion-theming": "10.0.19",
+    "next": "9.1.4",
+    "next-offline": "4.0.6",
+    "object-key-mirror": "1.0.5",
+    "ramda": "0.26.1",
+    "react": "16.12.0",
+    "react-dom": "16.12.0",
+    "react-hook-form": "3.28.7",
+    "react-redux": "7.1.3",
+    "rebass": "4.0.7",
+    "redux": "4.0.4",
+    "redux-devtools-extension": "2.13.8",
+    "redux-logger": "3.0.6",
+    "redux-persist": "^6.0.0",
+    "rxjs": "6.5.3",
+    "rxjs-hooks": "0.5.2",
+    "sanitize.css": "11.0.0",
+    "unfetch": "4.1.0",
+    "service": "file:../service",
+    "toolbelt": "file:../toolbelt",
+    "tags": "file:../tags"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.7.4",
+    "@babel/core": "7.7.4",
+    "@babel/preset-env": "7.7.4",
+    "@storybook/react": "5.2.6",
+    "babel-loader": "8.0.6",
+    "concurrently": "5.0.0",
+    "cpx": "1.5.0",
+    "esm": "3.2.25",
+    "next-transpile-modules": "2.3.1",
+    "rimraf": "3.0.0",
+    "webpack": "4.41.2"
+  },
+  "scripts": {
+    "storybook": "start-storybook --ci --port 8000",
+    "dev": "concurrently npm:local npm:storybook",
+    "local": "next 'src/app'"
+  }
+}
