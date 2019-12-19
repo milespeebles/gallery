@@ -10078,16 +10078,15 @@ serve-static@1.14.1:
     parseurl "~1.3.3"
     send "0.17.1"
 
-"service@file:../service":
+"service@git://github.com/milespeebles/service.git":
   version "0.1.0"
+  resolved "git://github.com/milespeebles/service.git#86b8d3a2928929b8f7bf8969835454f5921a89f1"
   dependencies:
     pouchdb-adapter-leveldb "7.1.1"
     ramda "0.26.1"
     rxdb "8.7.4"
-    service "file:../../Library/Caches/Yarn/v6/npm-service-0.1.0-63a53ae7-63f0-4a0c-83bf-43fc99165d51-1576716241731/node_modules/service"
     socket.io "2.3.0"
-    tags "file:../../Library/Caches/Yarn/v6/npm-service-0.1.0-63a53ae7-63f0-4a0c-83bf-43fc99165d51-1576716241731/node_modules/tags"
-    toolbelt "file:../../Library/Caches/Yarn/v6/npm-service-0.1.0-63a53ae7-63f0-4a0c-83bf-43fc99165d51-1576716241731/node_modules/toolbelt"
+    toolbelt "git://github.com/milespeebles/toolbelt.git"
 
 set-blocking@^2.0.0, set-blocking@~2.0.0:
   version "2.0.0"
@@ -10779,11 +10778,12 @@ symbol.prototype.description@^1.0.0:
     es-abstract "^1.16.0"
     has-symbols "^1.0.0"
 
-"tags@file:../tags":
+"tags@git://github.com/milespeebles/tags.git":
   version "0.1.0"
+  resolved "git://github.com/milespeebles/tags.git#8fc92d976015d14a1aa455e4f7f46e1b13731c31"
   dependencies:
-    service "file:../../Library/Caches/Yarn/v6/npm-tags-0.1.0-efbe5d2c-a72a-4065-b3c5-6306cc0961b5-1576716241844/node_modules/service"
-    toolbelt "file:../../Library/Caches/Yarn/v6/npm-tags-0.1.0-efbe5d2c-a72a-4065-b3c5-6306cc0961b5-1576716241844/node_modules/toolbelt"
+    service "git://github.com/milespeebles/service.git"
+    toolbelt "git://github.com/milespeebles/toolbelt.git"
 
 tapable@^1.0.0, tapable@^1.1.3:
   version "1.1.3"
@@ -10974,8 +10974,9 @@ toidentifier@1.0.0:
   resolved "https://registry.yarnpkg.com/toidentifier/-/toidentifier-1.0.0.tgz#7e1be3470f1e77948bc43d94a3c8f4d7752ba553"
   integrity sha512-yaOH/Pk/VEhBWWTlhI+qXxDFXlejDGcQipMlyxda9nthulaxLZUNcUqFxokp0vcYnvteJln5FNQDRrxj3YcbVw==
 
-"toolbelt@file:../toolbelt":
+"toolbelt@git://github.com/milespeebles/toolbelt.git":
   version "0.1.0"
+  resolved "git://github.com/milespeebles/toolbelt.git#835fca6ffb3836b9aeafbaab9ecb47b84a5634b3"
   dependencies:
     uuid "^3.3.3"
 
