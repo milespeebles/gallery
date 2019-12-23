@@ -10496,8 +10496,8 @@ serve-static@1.14.1:
     send "0.17.1"
 
 "service@git://github.com/milespeebles/service.git":
-  version "0.1.1"
-  resolved "git://github.com/milespeebles/service.git#590943ba5086db1eefde359563955e6d3aac73fe"
+  version "0.1.0"
+  resolved "git://github.com/milespeebles/service.git#0568234606bfebc479d1b0e15123f3bc9799105e"
   dependencies:
     pouchdb-adapter-leveldb "7.1.1"
     ramda "0.26.1"
