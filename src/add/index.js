@@ -7,7 +7,7 @@ import { SCHEMAS, NAMES } from '../../constants'
 const add = {
   type: 'request',
   method: 'post',
-  callback: async ({ Collection, req, res, db }) => {
+  callback: async ({ Collection, req, res }) => {
     const media = await Collection (
       NAMES.GALLERY_MEDIA,
       SCHEMAS.GALLERY_MEDIA,
