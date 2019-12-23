@@ -11,6 +11,6 @@
     "esm": "3.2.25"
   },
   "scripts": {
-    "docker:add": "docker run -d --network=\"host\" --name gallery-add milespeebles/gallery"
+    "docker:upload": "docker run -d -p 3000:3000 --name gallery-upload milespeebles/gallery-upload"
   }
 }

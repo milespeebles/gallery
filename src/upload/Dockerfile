@@ -8,4 +8,4 @@ RUN yarn install
 
 EXPOSE 3000
 
-CMD [ "node", "-r", "esm", "src/add" ]
+CMD [ "node", "-r", "esm", "src/upload" ]

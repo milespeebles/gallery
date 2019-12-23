@@ -1,17 +1,26 @@
+// TODO: get remote URL from env var through docker
+// TODO: create `web` app (next.js + rxdb)
+// TODO: save media to file (and perform transcodes with ffmpeg)
+// TODO: get local and global websocket
+// TODO: 
+
 import uuid from 'toolbelt/util/uuid'
 import getCurrentTime from 'toolbelt/util/get-current-time'
 import Service from 'service'
 
 import { SCHEMAS, NAMES } from '../../constants'
 
-const add = {
+const upload = {
   type: 'request',
   method: 'post',
-  callback: async ({ Collection, req, res }) => {
-    const media = await Collection (
-      NAMES.GALLERY_MEDIA,
-      SCHEMAS.GALLERY_MEDIA,
-    )
+  collections: [
+    {
+      name: NAMES.GALLERY_MEDIA,
+      schema: SCHEMAS.GALLERY_MEDIA,
+    },
+  ],
+  callback: async ({ req, res, state }) => {
+    const media = state[NAMES.GALLERY_MEDIA]
 
     const time = getCurrentTime ()
 
@@ -36,5 +45,5 @@ const add = {
   },
 }
 
-export default Service (add)
+export default Service (upload, { remote: 'http://192.168.50.202:8080/db' })
 
