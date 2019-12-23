@@ -77,17 +77,18 @@ const GALLERY_PAGE = {
   },
 }
 
-export const NAMES = {
-  GALLERY_MEDIA: 'gallery_media',
-  GALLERY_LISTS: 'gallery_lists',
-  GALLERY_FILTERS: 'gallery_filters',
-  GALLERY_PAGES: 'gallery_pages',
-}
-
 export const SCHEMAS = {
   GALLERY_MEDIA,
   GALLERY_LIST,
   GALLERY_FILTER,
   GALLERY_PAGE,
+}
+
+
+export const NAMES = {
+  GALLERY_MEDIA: 'gallery_media',
+  GALLERY_LISTS: 'gallery_lists',
+  GALLERY_FILTERS: 'gallery_filters',
+  GALLERY_PAGES: 'gallery_pages',
 }
 
