@@ -28,11 +28,15 @@
     "toolbelt": "git://github.com/milespeebles/toolbelt.git"
   },
   "devDependencies": {
-    "esm": "3.2.25"
+    "concurrently": "5.0.2",
+    "esm": "3.2.25",
+    "watch": "1.0.2"
   },
   "scripts": {
-    "start": "next src/web -p 5000",
-    "docker:web": "docker kill gallery-web; docker rm gallery-web; docker image rm milespeebles/gallery-web; docker build -f src/web/Dockerfile -t milespeebles/gallery-web . ; docker run -d -p 5000:5000 --name gallery-web milespeebles/gallery-web",
-    "docker:upload": "docker kill gallery-upload; docker rm gallery-upload; docker image rm milespeebles/gallery-upload; docker build -f src/upload/Dockerfile -t milespeebles/gallery-upload . ; docker run -d -p 3000:3000 --name gallery-upload -e \"REMOTE_URL=http://192.168.50.202:8080/db\" milespeebles/gallery-upload"
+    "start": "next src/web -p 5000 -H 0.0.0.0",
+    "docker:web": "watch 'docker kill gallery-web; docker rm gallery-web; docker build -f src/web/Dockerfile -t milespeebles/gallery-web . ; docker run -d -p 5000:5000 --name gallery-web milespeebles/gallery-web' ./src",
+    "docker:upload": "watch 'docker kill gallery-upload; docker rm gallery-upload; docker build -f src/upload/Dockerfile -t milespeebles/gallery-upload . ; docker run -d -p 3000:3000 --name gallery-upload -e \"REMOTE_URL=http://192.168.50.202:8080/db\" milespeebles/gallery-upload' ./src",
+    "docker:clean": "docker image rm milespeebles/gallery-web && docker image rm milespeebles/gallery-upload",
+    "docker:all": "concurrently npm:docker:web npm:docker:upload"
   }
 }

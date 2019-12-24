@@ -11,7 +11,7 @@ import uuid from 'toolbelt/util/uuid'
 import getCurrentTime from 'toolbelt/util/get-current-time'
 import Service from 'service'
 
-import { SCHEMAS, NAMES } from '../../constants'
+import { SCHEMAS, NAMES } from '../constants'
 
 const upload = {
   type: 'request',

@@ -2,11 +2,13 @@ FROM node:13
 
 WORKDIR /app
 
-COPY . ./
+EXPOSE 5000
 
-EXPOSE 3000
+COPY package.json ./
 
 RUN yarn install
+
+COPY . ./
 
 CMD [ "yarn", "start" ]
 
