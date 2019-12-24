@@ -1,8 +1,11 @@
-// TODO: get remote URL from env var through docker
+// TODO: server container: db, auth, local / global websocket
+// TODO: setup reverse proxy (redbird)
+// TODO: setup file server (upload, download)
 // TODO: create `web` app (next.js + rxdb)
 // TODO: save media to file (and perform transcodes with ffmpeg)
-// TODO: get local and global websocket
-// TODO: 
+// TODO: add gallery collections: filter, list, page
+// TODO: remove query from upload payload (only send 200)
+// TODO: setup docker-compose.yml (get REMOTE_URL env var)
 
 import uuid from 'toolbelt/util/uuid'
 import getCurrentTime from 'toolbelt/util/get-current-time'
@@ -21,6 +24,9 @@ const upload = {
   ],
   callback: async ({ req, res, state }) => {
     const media = state[NAMES.GALLERY_MEDIA]
+
+    console.log (req.file)
+    console.log (req.body)
 
     const time = getCurrentTime ()
 
@@ -45,5 +51,5 @@ const upload = {
   },
 }
 
-export default Service (upload, { remote: 'http://192.168.50.202:8080/db' })
+export default Service (upload, { remote: process.env.REMOTE_URL })
 

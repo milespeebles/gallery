@@ -3,6 +3,27 @@
   "version": "0.1.0",
   "license": "MIT",
   "dependencies": {
+    "@emotion/core": "10.0.22",
+    "@rebass/forms": "4.0.6",
+    "@reduxjs/toolkit": "1.0.4",
+    "crocks": "0.12.4",
+    "emotion-theming": "10.0.19",
+    "next": "9.1.4",
+    "nookies": "2.0.8",
+    "ramda": "0.26.1",
+    "react": "16.12.0",
+    "react-dom": "16.12.0",
+    "react-hook-form": "3.28.9",
+    "react-redux": "7.1.3",
+    "react-redux-firebase": "3.0.5",
+    "rebass": "4.0.7",
+    "redux": "4.0.4",
+    "redux-devtools-extension": "2.13.8",
+    "redux-logger": "3.0.6",
+    "redux-persist": "6.0.0",
+    "rxjs": "6.5.3",
+    "rxjs-hooks": "0.5.2",
+    "sanitize.css": "11.0.0",
     "service": "git://github.com/milespeebles/service.git",
     "tags": "git://github.com/milespeebles/tags.git",
     "toolbelt": "git://github.com/milespeebles/toolbelt.git"
@@ -11,6 +32,7 @@
     "esm": "3.2.25"
   },
   "scripts": {
-    "docker:upload": "docker run -d -p 3000:3000 --name gallery-upload milespeebles/gallery-upload"
+    "start": "next start src/web -p 5000",
+    "docker:upload": "docker kill gallery-upload; docker rm gallery-upload; docker image rm milespeebles/gallery-upload; docker build -f src/upload/Dockerfile -t milespeebles/gallery-upload . ; docker run -d -p 3000:3000 --name gallery-upload -e \"REMOTE_URL=http://192.168.50.202:8080/db\" milespeebles/gallery-upload"
   }
 }

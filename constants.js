@@ -3,6 +3,7 @@ const GALLERY_MEDIA = {
   version: 0,
   description: 'describes a media object',
   type: 'object',
+  attachments: {},
   properties: {
     id: {
       type: 'string',
