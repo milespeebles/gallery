@@ -1,6 +1,6 @@
+// TODO: replace env var with config.js and config.dist.js
 // TODO: server container: db, auth, local / global websocket
 // TODO: setup reverse proxy (redbird)
-// TODO: setup file server (upload, download)
 // TODO: create `web` app (next.js + rxdb)
 // TODO: save media to file (and perform transcodes with ffmpeg)
 // TODO: add gallery collections: filter, list, page
