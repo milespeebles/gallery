@@ -4,11 +4,9 @@ WORKDIR /app
 
 COPY . ./
 
-ENV REMOTE_URL "http://localhost:8080/db"
+EXPOSE 3000
 
 RUN yarn install
-
-EXPOSE 3000
 
 CMD [ "yarn", "start" ]
 
