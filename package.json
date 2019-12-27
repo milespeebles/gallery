@@ -8,7 +8,6 @@
     "@reduxjs/toolkit": "1.0.4",
     "crocks": "0.12.4",
     "emotion-theming": "10.0.19",
-    "mp4box": "^0.3.20",
     "next": "9.1.4",
     "nookies": "2.0.8",
     "ramda": "0.26.1",
